@@ -10,10 +10,16 @@ booksRouter
     .route('/')
 
 
-    .get(){
+    .get((req,res,next) =>{
 
-    }
+        const knexInstance = req.app.get('db')
 
-    .post(){
-        
-    }
+        booksService.getAllBooks(knexInstance)
+            .then(books =>{
+                res.json(books)
+            })
+            .catch(next)
+
+    })
+
+   

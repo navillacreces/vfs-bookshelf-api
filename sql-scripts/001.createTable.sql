@@ -5,6 +5,7 @@ CREATE TABLE bookshelf (
 	author TEXT NOT NULL,
 	rating INTEGER,
 	ownership TEXT, 
+	isbn TEXT,
 	img TEXT,
 	purchase_link TEXT
 );

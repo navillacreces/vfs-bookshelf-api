@@ -1,6 +1,6 @@
 BEGIN;
 
-INSERT INTO bookshelf (title,author,rating,ownership,isbn,img,purchase_link)
+INSERT INTO books (title,author,rating,ownership,isbn,img,purchase_link)
 
 VALUES
 (

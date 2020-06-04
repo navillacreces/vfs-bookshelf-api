@@ -41,8 +41,8 @@ booksRouter
 
         const knexInstance = req.app.get('db')
 
-        recipeService.insertBook(knexInstance,newBook)
-            .then(recipe =>{
+        booksService.insertBook(knexInstance,newBook)
+            .then(book =>{
                 res.location(`https://localhost:8000/books/{book.id}`).status(201).json(book)
             })
             .catch(err => {

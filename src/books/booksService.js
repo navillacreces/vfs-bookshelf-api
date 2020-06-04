@@ -2,21 +2,21 @@ const booksService = {
 
 
     getAllBooks(knex){
-        return knex.select('*').from('bookshelf');
+        return knex.select('*').from('books');
     },
 
     insertBook(knex,newBook){
         return knex
         .insert(newBook)
-        .into('bookshelf')
+        .into('books')
         .returning('*')
         .then(rows =>{
                 return rows[0]
         })
     },
 
-    deleteRecipe(knex, id ){
-        return knex('bookshelf').where({id}).delete()
+    deleteBook(knex, id ){
+        return knex('books').where({id}).delete()
     }
 
 

@@ -12,7 +12,7 @@ const {CLIENT_ORIGIN} = require('./config');
 
 app.use(
     cors({
-        origin: 'https://vfs-bookshelf.now.sh/'
+        origin: 'CLIENT_ORIGIN'
     })
 );
 

@@ -8,6 +8,14 @@ const app = express()
 
 const booksRouter = require('./books/books-router')
 
+const {CLIENT_ORIGIN} = require('./config');
+
+app.use(
+    cors({
+        origin: CLIENT_ORIGIN
+    })
+);
+
 app.get('/', (req, res) => {
 
     res.send('Hello, world!')

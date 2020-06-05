@@ -16,11 +16,7 @@ app.get('/', (req, res) => {
 
 const morganOption = (NODE_ENV === 'production') ? 'tiny' : 'common'
 
-app.use(cors({
-
-  origin: '*'
-
-}));
+app.use(cors())
 
 
 app.use(morgan(morganOption))

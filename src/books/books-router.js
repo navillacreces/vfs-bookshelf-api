@@ -25,7 +25,7 @@ booksRouter
 
     .post(bodyParser,(req,res) =>{
 
-        const {title,author,isbn,img,purchase_link} = req.body;
+        const {title,author,isbn,img,purchase_link,rating,ownership} = req.body;
 
         if (!title || !author){
             return res.status(400).send('invalid data')
@@ -50,7 +50,7 @@ booksRouter
             });
 
         })
-        
+
 booksRouter
             .route('/:id')
         

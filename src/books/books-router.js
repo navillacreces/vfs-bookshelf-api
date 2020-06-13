@@ -36,7 +36,10 @@ booksRouter
             author: author,
             isbn: isbn,
             img: img,
-            purchase_link: purchase_link
+            rating: rating, 
+            ownership: ownership,
+            purchase_link: purchase_link,
+
         }
 
         const knexInstance = req.app.get('db')

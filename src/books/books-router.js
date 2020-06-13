@@ -49,7 +49,22 @@ booksRouter
                 res.send("not posted" + JSON.stringify(err))
             });
 
-    })
+        })
+        
+booksRouter
+            .route('/:id')
+        
+            .delete((req,res,next) =>{
+                const {id} = req.params;
+        
+                const knexInstance = req.app.get('db')
+        
+                booksService.deleteBook(knexInstance,id)
+                    .then(book =>{
+                        res.send(204).end()
+                    })
+                    .catch(next)
+        
+            })
 
 module.exports = booksRouter
-   

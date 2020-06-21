@@ -11,8 +11,16 @@ const booksRouter = require('./books/books-router')
 
 app.get('/', (req, res) => {
 
-    res.send('Hello, world!')
+    res.send('getRoute')
 })
+
+app.post('/books',(req,res) =>{
+
+    res.send('postRoute')
+
+})
+
+
 
 const morganOption = (NODE_ENV === 'production') ? 'tiny' : 'common'
 
